@@ -1,0 +1,43 @@
+---
+import { getCollection } from "astro:content"
+import Button from "./Button.astro"
+import Textbox from "./Textbox.astro"
+
+const articles = await getCollection("articles")
+---
+
+<footer>
+    <div class="content">
+        <h3>Subscribe</h3>
+        <Textbox placeholder="awesome-dev@example.com" />
+        <Button text="Subscribe" />
+    
+        <h3>Articles</h3>
+        <ul>
+            <ul>
+                {articles.map(article => <li><a href={`/articles/${article.id}`}>{article.data.title}</a></li>)}
+            </ul>
+        </ul>
+    </div>
+
+    <div class="copyright">        
+        &copy; 2025 Sense Making Ltd. All rights reserved.
+    </div>
+</footer>
+
+<style>
+    .content {
+        padding: 1rem;
+        margin: 1rem;
+        border: 3px solid var(--colour-primary);
+        border-radius: 0.5rem;
+    }
+
+    .content h3 {
+        margin-top: 1rem;
+    }
+
+    .copyright {
+        text-align: center;        
+    }
+</style>

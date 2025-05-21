@@ -1,11 +1,12 @@
 ---
+import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content"
 
 const articles = await getCollection("articles")
 ---
 
-<div>
+<Layout title="Articles" description="A collection of articles on software development, design, and technology." image="/images/articles.jpg">
     <ul>
         {articles.map(article => <li><a href={`/articles/${article.id}`}>{article.data.title}</a></li>)}
     </ul>
-</div>
+</Layout>  

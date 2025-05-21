@@ -1,11 +1,40 @@
 ---
-import Latest from "../components/Latest.astro"
 import Layout from "../layouts/Layout.astro"
 ---
 
 <Layout title="TRNK" description="A Software Development Mindset" image="/images/trnk.png">
-	<h1>TRNK</h1>
-	<p>A Software Development Mindset.</p>
+	<div class="hero">		
+		<h2>A Software Development Mindset</h1>
+		<p>Build high performing teams through building quality in, evolutionary architecture and other stuff.</p>
+	</div>
 
-	<Latest />
+	<div class="other">
+		<h1>Build Quality In</h1>
+		<p>Enable high speed deliver by builind quality into your process rather and blocking delivery with gates.</p>
+	</div>
 </Layout>
+
+<style>
+	.hero {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;		
+		text-align: center;
+	}
+
+	.hero h2 {		
+		font-size: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	.hero p {
+		font-size: 1.5rem;
+	}
+
+	.other {
+		background-color: var(--colour-tertiary);
+		margin: 3rem 0;
+		padding: 2rem;		
+	}
+</style>

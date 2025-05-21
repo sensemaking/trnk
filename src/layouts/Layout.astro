@@ -1,4 +1,7 @@
 ---
+import Footer from '../components/Footer.astro'
+import Header from '../components/Header.astro'
+
 type Props = {
     title: string
     description: string
@@ -28,15 +31,22 @@ const { title, description, image } = Astro.props
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 </head>
 <body>
+  <Header />
+  <main>
   <slot /> 
+  </main>
+  <Footer />
 </body>
 </html>
 
 <style is:global>
-    /*
-  Josh's Custom CSS Reset
-  https://www.joshwcomeau.com/css/custom-css-reset/
-*/
+:root {
+  --colour-primary: #AE1400;
+  --colour-secondary: #222;
+  --colour-tertiary: #4381c1;
+  --colour-quaternary: #f3a712;
+  --colour-quinary: #e0ca3c;  
+}
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -48,7 +58,7 @@ const { title, description, image } = Astro.props
 
 html, body {
     font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
-    font-weight: normal;
+    font-weight: normal;    
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -60,6 +70,20 @@ html, body {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+
+  min-height: 100dvh;
+  background-color: var(--colour-secondary);
+  /* background: #701A0F;
+background: linear-gradient(350deg,rgba(112, 26, 15, 1) 0%, rgba(34, 34, 34, 1) 53%); */
+    color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+main {
+  flex: 1;
 }
 
 img, picture, video, canvas, svg {
@@ -81,6 +105,11 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;;
 }
 
 </style>

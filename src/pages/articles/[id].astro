@@ -1,10 +1,10 @@
 ---
-import { getCollection, render } from 'astro:content';
-import Layout from '../../layouts/Layout.astro';
+import { getCollection, render } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
 
 export async function getStaticPaths() {
-  const articles = await getCollection('articles');
-  return articles.map(article => ({
+  const articles = await getCollection("articles");
+  return articles.map((article) => ({
     params: { id: article.id },
     props: { article },
   }));
@@ -14,6 +14,20 @@ const { article } = Astro.props;
 const { Content } = await render(article);
 ---
 
-<Layout title={article.data.title} description={article.data.description} image={article.data.image}>
+<Layout
+  title={article.data.title}
+  description={article.data.description}
+  image={article.data.image}
+>
+  <div class="content">
     <Content />
+  </div>
 </Layout>
+
+<style>
+  .content {
+    padding: 1rem;
+    
+  }
+  
+</style>
