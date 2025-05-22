@@ -10,7 +10,21 @@ import Layout from "../layouts/Layout.astro"
 
 	<div class="other">
 		<h1>Build Quality In</h1>
-		<p>Enable high speed deliver by builind quality into your process rather and blocking delivery with gates.</p>
+		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi corrupti ratione distinctio excepturi placeat sequi, nostrum ad, cum, maxime optio quaerat explicabo quos. Dolorum quasi corporis fugit facilis quae maxime!</p>
+
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed dolorum quis atque provident unde praesentium deleniti veritatis, enim, temporibus repellat sunt odit nisi! Deleniti, fugiat voluptatum quos libero assumenda quae!</p>
+	</div>
+
+	<div class="other-2">
+		<h1>Evolutionary Architecture</h1>
+		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque natus itaque non modi eligendi expedita, ratione doloribus, totam nihil, nemo assumenda. Perspiciatis magni magnam quod, rem facilis at earum, consequuntur, soluta suscipit labore cumque officiis!</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis culpa in provident adipisci distinctio temporibus pariatur possimus soluta, illum nam accusamus sequi excepturi omnis quod!</p>
+	</div>
+
+	<div class="other-3">
+		<h1>And Something Else</h1>
+		<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis eum molestias, consequuntur placeat aliquid doloribus ex, suscipit impedit, magnam numquam consequatur totam. Ipsam, aliquam? Optio natus veniam praesentium mollitia corrupti vel, amet provident beatae animi iure harum quo consequuntur. Tenetur.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti aliquid itaque excepturi voluptate similique tenetur accusantium velit, ipsa exercitationem sit?</p>
 	</div>
 </Layout>
 
@@ -21,11 +35,13 @@ import Layout from "../layouts/Layout.astro"
 		justify-content: center;
 		align-items: center;		
 		text-align: center;
+		margin: 5rem 0;
 	}
 
 	.hero h2 {		
 		font-size: 2rem;
-		margin-bottom: 1rem;
+		margin-bottom: 2rem;
+		line-height: 1;
 	}
 
 	.hero p {
@@ -34,7 +50,22 @@ import Layout from "../layouts/Layout.astro"
 
 	.other {
 		background-color: var(--colour-tertiary);
-		margin: 3rem 0;
+		margin: 3rem 0 0 0;
 		padding: 2rem;		
+	}
+
+	.other-2 {
+		background-color: var(--colour-quaternary);
+		margin: 0 0 3rem 0;
+		padding: 2rem;		
+	}
+
+	.other-3 {
+		margin: 0 0 3rem 0;
+		padding: 0 2rem;		
+	}
+
+	.other p, .other-2 p, .other-3 p {
+		margin-bottom: 1rem;
 	}
 </style>

@@ -9,7 +9,6 @@ type Props = {
 }
 
 const { title, description, image } = Astro.props
-
 ---
 
 <!DOCTYPE html>
@@ -32,9 +31,7 @@ const { title, description, image } = Astro.props
 </head>
 <body>
   <Header />
-  <main>
-  <slot /> 
-  </main>
+  <main><slot /></main>
   <Footer />
 </body>
 </html>
@@ -111,5 +108,4 @@ a {
   text-decoration: none;
   color: inherit;;
 }
-
 </style>
